@@ -1,0 +1,20 @@
+[project]
+name = "research-formal"
+version = "0.1.0"
+description = "Research pipelines for CMUNeXt retinal thin-vessel segmentation experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.23",
+    "pillow>=9.0",
+    "kaggle>=1.6",
+    "torch>=1.13",
+    "torchvision>=0.14",
+    "tqdm>=4.64",
+    "segmentation-models-pytorch>=0.3.3",
+    "timm>=0.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
