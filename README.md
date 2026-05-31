@@ -1,5 +1,3 @@
-# Research Formal
-
 This workspace contains research code for evaluating CMUNeXt on retinal thin-vessel segmentation.
 
 ## Step 1: Vanilla CMUNeXt Pipeline
@@ -48,6 +46,13 @@ DATA_ROOT/
 Both notebooks use the Kaggle dataset `ipythonx/retinal-vessel-segmentation`. Edit `PROJECT_ROOT` and `DATASET_SUBDIR` at the top of each notebook if needed before running in Colab. Add `KAGGLE_USERNAME` and `KAGGLE_KEY` to Colab Secrets so the notebooks can pull the dataset through the Kaggle API.
 
 Each notebook writes per-epoch metrics to `training_history.csv` in its output folder during training, so partial runs still leave usable logs. Use `observations.md` as the running research log for training behavior, qualitative notes, and comparison conclusions.
+
+## Testing and Eval
+
+In addition to storing the training results for both versions, we can run eval on each model architecture with its own weights via:
+
+python run_segmentation.py --model vanilla --image path\to\image.png
+python run_segmentation.py --model sota --image path\to\image.png
 
 ## SOTA-Style Pipeline
 
